@@ -13,7 +13,6 @@ export default styled(Navbar).attrs({})`
   padding: 2% 0%;
   padding-right: 6%;
   position: fixed;
-  z-index: 1;
   background-color: #131313;
 
   .selected {
