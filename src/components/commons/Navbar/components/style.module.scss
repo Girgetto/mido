@@ -8,7 +8,6 @@
   }
 
   .language {
-    float: right;
     margin-right: 10%;
     flex-direction: row;
     display: flex;
@@ -68,14 +67,14 @@
   }
 
   .faIcon {
-    font-size: 48px;
-    margin: 14px;
+    font-size: 38px;
+    right: 0;
     position: absolute;
-    right: 10px;
+    margin: 20px;
   }
 
   .bars {
-    padding-top: 14px;
+    padding-top: 0px;
   }
 
   .link {

@@ -6,9 +6,6 @@ import background from '../../../assets/img/services4.jpg'
 export default styled(Services).attrs({})`
   .header {
     position: relative;
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
     height: 400px;
     display: flex;
@@ -24,6 +21,10 @@ export default styled(Services).attrs({})`
       right: 0;
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.5);
+      background-image: url('https://www.omidaconsulting.com/wp-content/uploads/2020/06/servizi-cover.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       z-index: 1;
     }
     p {

@@ -15,6 +15,23 @@ const MobileNavbar = ({ setLanguage }) => {
     i18n.changeLanguage(lng)
   }
 
+  const LINKS = [
+    { name: t('navbar.home', 'Home'), route: ROUTES.index },
+    { name: t('navbar.aboutUs', 'About Us'), route: ROUTES.aboutUs },
+    { name: t('navbar.services', 'Services'), route: ROUTES.services },
+    { name: t('navbar.contacts', 'Contacts'), route: ROUTES.contacts },
+  ]
+
+  const LANGUAGES = [
+    { language: 'en', style: 'gb' },
+    { language: 'it', style: 'it' },
+    { language: 'es', style: 'es' },
+    { language: 'de', style: 'de' },
+    { language: 'fr', style: 'fr' },
+    { language: 'ru', style: 'ru' },
+    { language: '中文', style: 'cn' },
+  ]
+
   return (
     <div className={style.mobileNavbar}>
       <div className={style.topnav}>
@@ -28,75 +45,22 @@ const MobileNavbar = ({ setLanguage }) => {
           <span className="icon" onClick={() => setIsBlock(!isBlock)}>
             <i className={cs('fa fa-times', style.faIcon)}></i>
           </span>
-          <Link className={style.link} to={ROUTES.index}>
-            {t('navbar.home', 'Home')}
-          </Link>
-          <Link className={style.link} to={ROUTES.aboutUs}>
-            {t('navbar.aboutUs', 'About Us')}
-          </Link>
-          <Link className={style.link} to={ROUTES.services}>
-            {t('navbar.services', 'Services')}
-          </Link>
-          <Link className={style.link} to={ROUTES.contacts}>
-            {t('navbar.contacts', 'Contacts')}
-          </Link>
+          {LINKS.map(({ name, route }) => (
+            <Link className={style.link} to={route}>
+              {name}
+            </Link>
+          ))}
           <div className={style.language}>
-            <span
-              className="language__gb"
-              onClick={() => changeLanguage('en')}
-              role="img"
-              aria-label="en"
-            >
-              EN
-            </span>
-            <span
-              className="language__it"
-              onClick={() => changeLanguage('it')}
-              role="img"
-              aria-label="it"
-            >
-              IT
-            </span>
-            <span
-              className="language__es"
-              onClick={() => changeLanguage('es')}
-              role="img"
-              aria-label="es"
-            >
-              ES
-            </span>
-            <span
-              className="language__de"
-              onClick={() => changeLanguage('de')}
-              role="img"
-              aria-label="de"
-            >
-              DE
-            </span>
-            <span
-              className="language__fr"
-              onClick={() => changeLanguage('fr')}
-              role="img"
-              aria-label="de"
-            >
-              FR
-            </span>
-            <span
-              className="language__ru"
-              onClick={() => changeLanguage('ru')}
-              role="img"
-              aria-label="ru"
-            >
-              RU
-            </span>
-            <span
-              className="language__cn"
-              onClick={() => changeLanguage('cn')}
-              role="img"
-              aria-label="cn"
-            >
-              中文
-            </span>
+            {LANGUAGES.map(({ language, style }) => (
+              <span
+                className={`language__${style}`}
+                onClick={() => changeLanguage(language)}
+                role="img"
+                aria-label={language}
+              >
+                {language.toUpperCase()}
+              </span>
+            ))}
           </div>
         </div>
       </div>
