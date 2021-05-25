@@ -65,6 +65,7 @@ export default styled(Services).attrs({})`
       img {
         width: 389px;
         height: 150px;
+        object-fit: cover;
       }
       p {
         max-width: 439px;

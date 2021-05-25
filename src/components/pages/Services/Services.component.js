@@ -1,12 +1,18 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import accordoDiSegnalazione from '../../../../src/assets/contracts/accordo_di_segnalazione.docx'
-import accordoMediatoriEn from '../../../../src/assets/contracts/accordo_mediatori_en.doc'
-import accordoMediatori from '../../../../src/assets/contracts/accordo_mediatori.doc'
-import consenso from '../../../../src/assets/contracts/consenso_al_trattamento_dei_dati.pdf'
-import contrattoSegnalatore from '../../../../src/assets/contracts/contratto_segnalatore.docx'
-import guidaPerAcquisto from '../../../../src/assets/contracts/guida_per_acquisto_in_italia.pdf'
+import accordoDiSegnalazione from '../../../assets/contracts/accordo_di_segnalazione.docx'
+import accordoMediatoriEn from '../../../assets/contracts/accordo_mediatori_en.doc'
+import accordoMediatori from '../../../assets/contracts/accordo_mediatori.doc'
+import consenso from '../../../assets/contracts/consenso_al_trattamento_dei_dati.pdf'
+import contrattoSegnalatore from '../../../assets/contracts/contratto_segnalatore.docx'
+import guidaPerAcquisto from '../../../assets/contracts/guida_per_acquisto_in_italia.pdf'
+import service1 from '../../../assets/img/services1.jpg'
+import service2 from '../../../assets/img/services2.jpg'
+import service3 from '../../../assets/img/services3.jpg'
+import service4 from '../../../assets/img/services4.jpg'
+import service5 from '../../../assets/img/Experience1.jpg'
+import service6 from '../../../assets/img/Experience2.jpg'
 
 import { SEO } from '../../layout'
 
@@ -53,31 +59,31 @@ const Services = ({ className }) => {
           <h1>01</h1>
           <img
             alt="service-1"
-            src="https://www.omidaconsulting.com/wp-content/uploads/2020/06/6.jpg"
+            src={service1}
           ></img>
           <p>{t('services.TheTarget')}</p>
         </div>
         <div className="flex">
           <h1>02</h1>
           <img
-            alt="service-1"
-            src="https://www.omidaconsulting.com/wp-content/uploads/2020/06/4.jpg"
+            alt="service-2"
+            src={service2}
           ></img>
           <p>{t('services.ADeep')}</p>
         </div>
         <div className="flex">
           <h1>03</h1>
           <img
-            alt="service-1"
-            src="https://www.omidaconsulting.com/wp-content/uploads/2020/06/1.jpg"
+            alt="service-3"
+            src={service3}
           ></img>
           <p>{t('services.WeWill')}</p>
         </div>
         <div className="flex">
           <h1>04</h1>
           <img
-            alt="service-1"
-            src="https://www.omidaconsulting.com/wp-content/uploads/2020/06/2.jpg"
+            alt="service-4"
+            src={service4}
           ></img>
           <p>{t('services.WeCoordinate')}</p>
         </div>
@@ -85,7 +91,7 @@ const Services = ({ className }) => {
           <h1>05</h1>
           <img
             alt="service-1"
-            src="https://www.omidaconsulting.com/wp-content/uploads/2020/06/7.jpg"
+            src={service5}
           ></img>
           <p>{t('services.Documentation')}</p>
         </div>
@@ -93,7 +99,7 @@ const Services = ({ className }) => {
           <h1>06</h1>
           <img
             alt="service-1"
-            src="https://www.omidaconsulting.com/wp-content/uploads/2020/06/5.jpg"
+            src={service6}
           ></img>
           <p>{t('services.WeManage')}</p>
         </div>
