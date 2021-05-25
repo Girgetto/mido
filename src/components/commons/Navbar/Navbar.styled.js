@@ -49,8 +49,6 @@ export default styled(Navbar).attrs({})`
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 20vw;
-    max-width: 20vw;
     &__gb,
     &__it,
     &__de,
@@ -59,7 +57,7 @@ export default styled(Navbar).attrs({})`
     &__ru,
     &__fr {
       border: 1px solid white;
-      width: 30px;
+      min-width: 30px;
       height: 30px;
       margin-left: 10px;
       display: flex;
