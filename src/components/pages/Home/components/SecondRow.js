@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './style.module.scss'
-import view1 from '../../../../assets/img/view1.jpg'
+import view1 from '../../../../assets/img/services2.jpg'
 import view2 from '../../../../assets/img/view2.jpg'
 import cs from 'classnames'
 
